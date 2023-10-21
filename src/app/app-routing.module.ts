@@ -33,7 +33,27 @@ const routes: Routes = [
   },
   {
     path: 'bienvenida',
-    loadChildren: () => import('./bienvenida/bienvenida.module').then( m => m.BienvenidaPageModule)
+    loadChildren: () => import('./pages/bienvenida/bienvenida.module').then( m => m.BienvenidaPageModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'login-general',
+    loadChildren: () => import('./pages/login-general/login-general.module').then( m => m.LoginGeneralPageModule)
+  },
+  {
+    path: 'login-pasajero',
+    loadChildren: () => import('./pages/login-pasajero/login-pasajero.module').then( m => m.LoginPasajeroPageModule)
+  },
+  {
+    path: 'login-conductor',
+    loadChildren: () => import('./pages/login-conductor/login-conductor.module').then( m => m.LoginConductorPageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
   }
 ];
 
