@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Agregar Usuario</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button text="Atrás"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Nombre de Usuario</ion-label>
+      <ion-input type="text" name="txNombreUsuario" [(ngModel)]="nuevoUsuario.nombreUsuario" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Nombres</ion-label>
+      <ion-input type="text" name="txNombres" [(ngModel)]="nuevoUsuario.nombres" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Apellidos</ion-label>
+      <ion-input type="text" name="txApellidos" [(ngModel)]="nuevoUsuario.apellidos" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input type="email" name="txCorreo" [(ngModel)]="nuevoUsuario.correo" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" name="txContrasena" [(ngModel)]="nuevoUsuario.contrasena" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">¿Quiéres ser conductor?</ion-label>
+      <ion-select name="slRol" [(ngModel)]="nuevoUsuario.conductor" required>
+        <ion-select-option value="1">Si</ion-select-option>
+        <ion-select-option value="0">No</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" type="submit" color="success" (click)="registrarUsuario()">Agregar</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" color="danger">Cancelar</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
